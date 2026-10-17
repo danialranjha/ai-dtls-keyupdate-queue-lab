@@ -1,0 +1,1177 @@
+{
+  "scope": "Synthetic scheduler events; exact Pion methods; captured command starts, no network or cryptography",
+  "fixture_count": 8,
+  "mode_count": 4,
+  "rows": [
+    {
+      "case": "ordinary_only",
+      "mode": "original",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 0,
+          "key_update_in_flight": false
+        },
+        {
+          "phase": "first-drive",
+          "queue": [],
+          "captured_starts": [
+            "ordinary-write"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": false
+        }
+      ]
+    },
+    {
+      "case": "ordinary_only",
+      "mode": "coalesce_only",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 0,
+          "key_update_in_flight": false
+        },
+        {
+          "phase": "first-drive",
+          "queue": [],
+          "captured_starts": [
+            "ordinary-write"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": false
+        }
+      ]
+    },
+    {
+      "case": "ordinary_only",
+      "mode": "progress_only",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 0,
+          "key_update_in_flight": false
+        },
+        {
+          "phase": "first-drive",
+          "queue": [],
+          "captured_starts": [
+            "ordinary-write"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": false
+        }
+      ]
+    },
+    {
+      "case": "ordinary_only",
+      "mode": "merged",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 0,
+          "key_update_in_flight": false
+        },
+        {
+          "phase": "first-drive",
+          "queue": [],
+          "captured_starts": [
+            "ordinary-write"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": false
+        }
+      ]
+    },
+    {
+      "case": "one_request_waiting",
+      "mode": "original",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "first-drive",
+          "queue": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [],
+          "captured_starts": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "one_request_waiting",
+      "mode": "coalesce_only",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "first-drive",
+          "queue": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [],
+          "captured_starts": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "one_request_waiting",
+      "mode": "progress_only",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "first-drive",
+          "queue": [
+            "required-response"
+          ],
+          "captured_starts": [
+            "ordinary-write"
+          ],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [],
+          "captured_starts": [
+            "ordinary-write",
+            "required-response"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "one_request_waiting",
+      "mode": "merged",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "first-drive",
+          "queue": [
+            "required-response"
+          ],
+          "captured_starts": [
+            "ordinary-write"
+          ],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [],
+          "captured_starts": [
+            "ordinary-write",
+            "required-response"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "three_requests_waiting",
+      "mode": "original",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "required-response",
+            "required-response",
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 3,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "first-drive",
+          "queue": [
+            "required-response",
+            "required-response",
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 3,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [
+            "required-response",
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [
+            "required-response"
+          ],
+          "required_responses_queued": 2,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "three_requests_waiting",
+      "mode": "coalesce_only",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "first-drive",
+          "queue": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [],
+          "captured_starts": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "three_requests_waiting",
+      "mode": "progress_only",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "required-response",
+            "required-response",
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 3,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "first-drive",
+          "queue": [
+            "required-response",
+            "required-response",
+            "required-response"
+          ],
+          "captured_starts": [
+            "ordinary-write"
+          ],
+          "required_responses_queued": 3,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [
+            "required-response",
+            "required-response"
+          ],
+          "captured_starts": [
+            "ordinary-write",
+            "required-response"
+          ],
+          "required_responses_queued": 2,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "three_requests_waiting",
+      "mode": "merged",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "first-drive",
+          "queue": [
+            "required-response"
+          ],
+          "captured_starts": [
+            "ordinary-write"
+          ],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [],
+          "captured_starts": [
+            "ordinary-write",
+            "required-response"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "no_response_requested",
+      "mode": "original",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "first-drive",
+          "queue": [],
+          "captured_starts": [
+            "ordinary-write"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "no_response_requested",
+      "mode": "coalesce_only",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "first-drive",
+          "queue": [],
+          "captured_starts": [
+            "ordinary-write"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "no_response_requested",
+      "mode": "progress_only",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "first-drive",
+          "queue": [],
+          "captured_starts": [
+            "ordinary-write"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "no_response_requested",
+      "mode": "merged",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "first-drive",
+          "queue": [],
+          "captured_starts": [
+            "ordinary-write"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "crossed_local",
+      "mode": "original",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "local-update",
+            "required-response",
+            "required-response",
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 3,
+          "key_update_in_flight": false
+        },
+        {
+          "phase": "first-drive",
+          "queue": [
+            "required-response",
+            "required-response",
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [
+            "local-update"
+          ],
+          "required_responses_queued": 3,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [
+            "required-response",
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [
+            "local-update",
+            "required-response"
+          ],
+          "required_responses_queued": 2,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "crossed_local",
+      "mode": "coalesce_only",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "local-update",
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": false
+        },
+        {
+          "phase": "first-drive",
+          "queue": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [
+            "local-update"
+          ],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [],
+          "captured_starts": [
+            "local-update",
+            "required-response",
+            "ordinary-write"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "crossed_local",
+      "mode": "progress_only",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "local-update",
+            "required-response",
+            "required-response",
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 3,
+          "key_update_in_flight": false
+        },
+        {
+          "phase": "first-drive",
+          "queue": [
+            "required-response",
+            "required-response",
+            "required-response"
+          ],
+          "captured_starts": [
+            "local-update",
+            "ordinary-write"
+          ],
+          "required_responses_queued": 3,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [
+            "required-response",
+            "required-response"
+          ],
+          "captured_starts": [
+            "local-update",
+            "ordinary-write",
+            "required-response"
+          ],
+          "required_responses_queued": 2,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "crossed_local",
+      "mode": "merged",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "local-update",
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": false
+        },
+        {
+          "phase": "first-drive",
+          "queue": [
+            "required-response"
+          ],
+          "captured_starts": [
+            "local-update",
+            "ordinary-write"
+          ],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [],
+          "captured_starts": [
+            "local-update",
+            "ordinary-write",
+            "required-response"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "other_category",
+      "mode": "original",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": false
+        },
+        {
+          "phase": "first-drive",
+          "queue": [],
+          "captured_starts": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "other_category",
+      "mode": "coalesce_only",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": false
+        },
+        {
+          "phase": "first-drive",
+          "queue": [],
+          "captured_starts": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "other_category",
+      "mode": "progress_only",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": false
+        },
+        {
+          "phase": "first-drive",
+          "queue": [],
+          "captured_starts": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "other_category",
+      "mode": "merged",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": false
+        },
+        {
+          "phase": "first-drive",
+          "queue": [],
+          "captured_starts": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "canceled_write",
+      "mode": "original",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "first-drive",
+          "queue": [
+            "required-response"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "canceled_write",
+      "mode": "coalesce_only",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "first-drive",
+          "queue": [
+            "required-response"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "canceled_write",
+      "mode": "progress_only",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "first-drive",
+          "queue": [
+            "required-response"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "canceled_write",
+      "mode": "merged",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "first-drive",
+          "queue": [
+            "required-response"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        }
+      ]
+    },
+    {
+      "case": "full_ack_drain",
+      "mode": "original",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "required-response",
+            "required-response",
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 3,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "first-drive",
+          "queue": [
+            "required-response",
+            "required-response",
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 3,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [
+            "required-response",
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [
+            "required-response"
+          ],
+          "required_responses_queued": 2,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [
+            "required-response",
+            "required-response"
+          ],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [],
+          "captured_starts": [
+            "required-response",
+            "required-response",
+            "required-response",
+            "ordinary-write"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [],
+          "captured_starts": [
+            "required-response",
+            "required-response",
+            "required-response",
+            "ordinary-write"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": false
+        }
+      ]
+    },
+    {
+      "case": "full_ack_drain",
+      "mode": "coalesce_only",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "first-drive",
+          "queue": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [],
+          "captured_starts": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [],
+          "captured_starts": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": false
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [],
+          "captured_starts": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": false
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [],
+          "captured_starts": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": false
+        }
+      ]
+    },
+    {
+      "case": "full_ack_drain",
+      "mode": "progress_only",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "required-response",
+            "required-response",
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 3,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "first-drive",
+          "queue": [
+            "required-response",
+            "required-response",
+            "required-response"
+          ],
+          "captured_starts": [
+            "ordinary-write"
+          ],
+          "required_responses_queued": 3,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [
+            "required-response",
+            "required-response"
+          ],
+          "captured_starts": [
+            "ordinary-write",
+            "required-response"
+          ],
+          "required_responses_queued": 2,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [
+            "required-response"
+          ],
+          "captured_starts": [
+            "ordinary-write",
+            "required-response",
+            "required-response"
+          ],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [],
+          "captured_starts": [
+            "ordinary-write",
+            "required-response",
+            "required-response",
+            "required-response"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [],
+          "captured_starts": [
+            "ordinary-write",
+            "required-response",
+            "required-response",
+            "required-response"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": false
+        }
+      ]
+    },
+    {
+      "case": "full_ack_drain",
+      "mode": "merged",
+      "snapshots": [
+        {
+          "phase": "queued",
+          "queue": [
+            "required-response",
+            "ordinary-write"
+          ],
+          "captured_starts": [],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "first-drive",
+          "queue": [
+            "required-response"
+          ],
+          "captured_starts": [
+            "ordinary-write"
+          ],
+          "required_responses_queued": 1,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [],
+          "captured_starts": [
+            "ordinary-write",
+            "required-response"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": true
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [],
+          "captured_starts": [
+            "ordinary-write",
+            "required-response"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": false
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [],
+          "captured_starts": [
+            "ordinary-write",
+            "required-response"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": false
+        },
+        {
+          "phase": "ack-and-drive",
+          "queue": [],
+          "captured_starts": [
+            "ordinary-write",
+            "required-response"
+          ],
+          "required_responses_queued": 0,
+          "key_update_in_flight": false
+        }
+      ]
+    }
+  ]
+}

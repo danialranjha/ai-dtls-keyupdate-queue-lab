@@ -1,0 +1,18 @@
+{
+  "tests_passed": [
+    "TestWriteProgress",
+    "TestCoalescing",
+    "TestCoalescingAloneDoesNotUnblock",
+    "TestProgressAloneDoesNotCoalesce",
+    "TestOrdinaryTwin",
+    "TestNoResponseRequestedTwin",
+    "TestResponseRetainedUntilAck",
+    "TestCrossedLocalUpdate",
+    "TestUnrelatedFlight",
+    "TestCancellation",
+    "TestFiniteAckDrain"
+  ],
+  "tests_failed": 0,
+  "exact_source_bodies": 16,
+  "scope": "component harness; no network or model"
+}

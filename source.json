@@ -1,0 +1,42 @@
+{
+  "upstream": "https://github.com/pion/dtls/pull/1236",
+  "path": "internal/handshake/post_handshake.go",
+  "functions": [
+    "startQueuedPostHandshake",
+    "commandEligible",
+    "canceledPostHandshakeCommand",
+    "queueRequiredKeyUpdateResponse"
+  ],
+  "versions": {
+    "old": {
+      "commit": "9c02a60bfe8e86f022273039f96ae41634ffcbea",
+      "git_blob": "937fe5faedec0835c7eabec782c171a7caf090ff",
+      "sha256": "603f0226736ba40fc40a6faf7ab59a9607fafd0aae97c67282107476553050c1",
+      "function_sha256": {
+        "startQueuedPostHandshake": "885d7f15270f7a260038f5adc5424e26e9d7607d7af4888382a5fe62e1466554",
+        "commandEligible": "f13f68f5c999d9605d97a865a1fa4d40e2737dffc1bc9433bc83d5507dd1aaa0",
+        "canceledPostHandshakeCommand": "4fc7bd3bfe96d4271c0aded33949f7812ec2658a46d72796606d585ed3597abe",
+        "queueRequiredKeyUpdateResponse": "89c4ca05a174db9357bf3baded5c9adb65a335e026e3f4bfd3ce69acc26a2494"
+      }
+    },
+    "new": {
+      "commit": "79dc6cb5d933375232b55fd8a70684411fc52afe",
+      "git_blob": "c43b1c1f3be8b04e943710caf841907c3319a21f",
+      "sha256": "49808bd8952616374fc13e693b4097b9265e613ded609224628557d38afd2770",
+      "function_sha256": {
+        "startQueuedPostHandshake": "31a22564950aa01bf976ce8cd3abc6bcbfa7e369fab619874c3c37ee6cc013d1",
+        "commandEligible": "30583a5ad014500cecb2cba1d209649dac795be6703a6996085256b842b01937",
+        "canceledPostHandshakeCommand": "4fc7bd3bfe96d4271c0aded33949f7812ec2658a46d72796606d585ed3597abe",
+        "queueRequiredKeyUpdateResponse": "85477eba17a366d980dc64bfde7b275807a34d378799bca1de79fc790baf94b5"
+      }
+    }
+  },
+  "adaptations": [
+    "Exact function bodies, unchanged. Package and imports are local.",
+    "handshake KeyUpdate constants use a tiny local shim with values 0 and 1.",
+    "Post-handshake fields are reduced to the fields these functions access.",
+    "startPostHandshakeCommand records selected commands and marks a key-update flight active; it does not encrypt, send or update traffic keys.",
+    "The fixture explicitly deletes the active-flight marker for an ACK. No packet validation or ACK processing is reproduced.",
+    "Cancellation completion is a nil-safe recording adapter."
+  ]
+}
